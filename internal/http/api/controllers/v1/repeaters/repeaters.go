@@ -400,9 +400,9 @@ func POSTRepeater(c *gin.Context) {
 		repeater.ID = json.RadioID
 
 		// Generate a random password of 8 characters
-		const randLen = 8
-		const randNum = 1
-		const randSpecial = 2
+		const randLen = 13
+		const randNum = 5
+		const randSpecial = 0
 		repeater.Password, err = utils.RandomPassword(randLen, randNum, randSpecial)
 		if err != nil {
 			logging.Errorf("Failed to generate a repeater password %v", err)
